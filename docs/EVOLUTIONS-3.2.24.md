@@ -1,0 +1,4 @@
+# Gear Control 3.2.24 — données protégées contre les coupures
+
+- Tous les fichiers de données du service sont désormais écrits sur le disque avant de remplacer l’ancienne version. Sont concernés : les appareils connus, les noms, les profils et automatisations, les préférences d’affichage, l’action épinglée, les Stream Deck, la DualSense, les associations de souris sans fil, l’historique de batterie, les jeux choisis, les réglages de mise à jour et la connexion Spotify. Une coupure de courant ou un arrêt forcé laisse donc l’ancienne version ou la nouvelle, jamais un fichier rempli de zéros.
+- Si la clé de la télécommande (`remote-token`) est illisible, le service ne s’arrête plus. Il la met de côté sous le nom `remote-token.corrupt-<horodatage>` et en crée une nouvelle. Les téléphones déjà associés doivent alors se reconnecter avec le nouveau lien. La clé abîmée n’est jamais réutilisée.
